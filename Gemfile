@@ -10,6 +10,7 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
+gem 'devise', '~> 4.2', '>= 4.2.0'
 gem 'sass-rails', '~> 5.0'
 
 gem 'simple_form', '~> 4.0', '>= 4.0.1'

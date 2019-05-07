@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
-  resource :items
+  devise_for :users
+  resource :items do
+end
   root 'items#index'
 
-  get 'items/:id', to: 'items#show'
+  get 'items/:id', :to => 'items#show', :as => 'item'
 
-  get 'items/:id/edit', to: 'items#edit'
+  get 'items/:id/edit', :to => 'items#edit', :as => 'edit/item'
 
-  patch 'items/:id', to: 'items#update'
+  patch 'items/:id', :to => 'items#update'
 
-  put 'items/:id', to: 'items#update'
+  delete 'items/:id', :to => 'items#destroy'
+
+  patch 'items/:id/complete', :to => 'items#complete', :as => 'complete'
+
 end
